@@ -11,9 +11,7 @@ import java.util.*
 
 abstract class BaseAdapter<VB : ViewDataBinding, T>(private var layout: Int) : RecyclerView.Adapter<BaseAdapter<VB, T>.ViewHolder>() {
 
-    /**
-     * This is the list which is displayed to the User
-     * */
+
     val displayList = ArrayList<T>()
 
     private lateinit var mRecyclerView: RecyclerView
@@ -52,10 +50,6 @@ abstract class BaseAdapter<VB : ViewDataBinding, T>(private var layout: Int) : R
             false
         )
         val view = viewBinding.root
-        /**
-         * This logic is been used when user wants to display the percentage
-         * width of the screen when using it in horizontal recyclerview.
-         * */
         onSetItemPercentageWidth?.invoke()?.let { percentageWidth ->
             val param = view.layoutParams
             param.width =

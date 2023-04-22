@@ -9,7 +9,6 @@ import androidx.databinding.ViewDataBinding
 import com.example.myapplication.common.data.database.daos.AppDao
 import com.example.myapplication.common.data.network.model.ResponseCode
 import com.example.myapplication.common.data.prefs.SharedPref
-import com.example.myapplication.common.multilanguage.LocaleManager
 import com.example.myapplication.common.utils.AppLoader
 import com.example.myapplication.demo.App
 import kotlinx.coroutines.channels.ReceiveChannel
@@ -35,12 +34,11 @@ abstract class BaseActivity<VB : ViewDataBinding>(private val layoutRes: Int) : 
     }
 
     override fun attachBaseContext(base: Context?) {
-        super.attachBaseContext(if (base != null) LocaleManager.setLocale(base) else base)
+        super.attachBaseContext(base)
     }
 
 
     protected fun setNewLocale(language: String) {
-        LocaleManager.setNewLocale(this, language)
         recreate()
     }
 
@@ -117,10 +115,7 @@ abstract class BaseActivity<VB : ViewDataBinding>(private val layoutRes: Int) : 
             ResponseCode.RequestTimeOut.code,
             ResponseCode.Conflict.code,
             ResponseCode.Blocked.code -> {
-//                val errorRawData = throwable.response()?.errorBody()?.string()?.trim()
-//                if (!errorRawData.isNullOrEmpty()) {
-//                    errorDialog(JSONObject(errorRawData).optString("message", ""))
-//                }
+
             }
         }
     }

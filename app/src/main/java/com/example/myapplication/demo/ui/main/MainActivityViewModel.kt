@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.myapplication.common.base.BaseViewModel
-import com.common.base.SingleLiveEvent
+import com.example.myapplication.common.base.SingleLiveEvent
 import com.example.myapplication.common.data.database.entities.UserLocal
 import com.example.myapplication.common.data.network.model.data_class_exmple
 import kotlinx.coroutines.launch

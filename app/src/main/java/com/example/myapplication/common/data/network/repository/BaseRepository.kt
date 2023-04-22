@@ -15,7 +15,6 @@ abstract class BaseRepository {
         return withContext(Dispatchers.IO) {
             try {
                 val response = apiCall()
-                //Listen APIs Response/Failure in @Dispatchers.Main thread
                 if (response.code() == ResponseCode.OK.code)
                     withContext(Dispatchers.Main) { ApiSuccess(response.body()) }
                 else

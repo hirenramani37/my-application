@@ -1,4 +1,4 @@
-package com.common.base
+package com.example.myapplication.common.base
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
@@ -28,9 +28,6 @@ class SingleLiveEvent<T> : MutableLiveData<T>() {
         super.setValue(value)
     }
 
-    /**
-     * Used for cases where T is Void, to make calls cleaner.
-     */
     fun call() {
         value = null
     }

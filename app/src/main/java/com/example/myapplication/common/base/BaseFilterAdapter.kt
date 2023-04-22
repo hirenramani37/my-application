@@ -7,9 +7,7 @@ import java.util.*
 
 abstract class BaseFilterAdapter<VB : ViewDataBinding, T>(layout: Int) : BaseAdapter<VB, T>(layout), Filterable {
 
-    /**
-     * This is the main list where user can do search items from it.
-     * */
+
     private val mainSearchList = ArrayList<T>()
 
     abstract fun includeItem(query: CharSequence?, item: T): Boolean

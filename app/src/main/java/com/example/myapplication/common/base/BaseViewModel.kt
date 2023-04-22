@@ -8,7 +8,6 @@ import com.example.myapplication.common.data.ApiEvent
 import com.example.myapplication.common.data.ApiSuccess
 import com.example.myapplication.common.data.Event
 import com.example.myapplication.common.data.network.repository.Api1Repository
-import com.example.myapplication.common.data.network.repository.Api2Repository
 import com.example.myapplication.common.data.prefs.SharedPref
 import com.example.myapplication.common.data.database.daos.AppDao
 import com.example.myapplication.demo.App
@@ -24,7 +23,6 @@ open class BaseViewModel : ViewModel(), CoroutineScope {
 
     val sharedPref: SharedPref by lazy { App.getInstance().getPref() }
     protected val api1Repository: Api1Repository by lazy { Api1Repository.getInstance() }
-    protected val api2Repository: Api2Repository by lazy { Api2Repository.getInstance() }
     protected val dao: AppDao by lazy { App.getInstance().getDao() }
 
     private val errorHandler = CoroutineExceptionHandler { _, throwable -> Timber.w(throwable) }

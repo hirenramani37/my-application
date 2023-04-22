@@ -8,9 +8,14 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 
 interface IApiService1 : IBaseService {
+
+//    @POST("change-lang")
+//    suspend fun language(@Body body: Language): Response<LanguageResponse>
 
     @GET("products")
     suspend fun getUsers(): Response<List<data_class_exmple.data_class_exmpleItem>>
