@@ -2,12 +2,69 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/tvItemText"
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".common.utils.SpinnerArrayAdapter"
-        tools:text="aldf dsk" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Air Id  " />
+
+            <TextView
+                android:id="@+id/tvAirId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Air Id" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Air Name  " />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Air Id" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Air Id  " />
+
+            <TextView
+                android:id="@+id/tvAirTrips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AirTrips" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 
 

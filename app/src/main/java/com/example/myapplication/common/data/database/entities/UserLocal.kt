@@ -8,6 +8,7 @@ class UserLocal {
 
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0L
-    var displayAlias: String? = null
-    var displayPic: String? = null
+    var displayname: String? = null
+    var trips: Int? = null
+    var airId: String? = null
 }

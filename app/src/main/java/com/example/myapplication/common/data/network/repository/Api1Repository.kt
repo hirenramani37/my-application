@@ -5,9 +5,8 @@ import com.example.myapplication.common.data.network.api.IApiService1
 
 class Api1Repository(private val apiService: IApiService1) : BaseRepository() {
 
-    suspend fun getUsers() = callApi { apiService.getUsers() }
+    suspend fun getUsers(page: Int,pageSize: Int) = callApi { apiService.getUsers(page,pageSize) }
 
-    suspend fun getUsers2() = callApi { apiService.getUsers() }
 
     companion object {
         @Volatile

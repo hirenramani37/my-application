@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "3667437a9a7f06710ac2836c97506b91",
+    "identityHash": "cc582452d27537ad4017739774cdfb3c",
     "entities": [
       {
         "tableName": "UserLocal",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `displayAlias` TEXT, `displayPic` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `displayname` TEXT, `trips` INTEGER, `airId` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -15,23 +15,29 @@
             "notNull": true
           },
           {
-            "fieldPath": "displayAlias",
-            "columnName": "displayAlias",
+            "fieldPath": "displayname",
+            "columnName": "displayname",
             "affinity": "TEXT",
             "notNull": false
           },
           {
-            "fieldPath": "displayPic",
-            "columnName": "displayPic",
+            "fieldPath": "trips",
+            "columnName": "trips",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "airId",
+            "columnName": "airId",
             "affinity": "TEXT",
             "notNull": false
           }
         ],
         "primaryKey": {
+          "autoGenerate": true,
           "columnNames": [
             "id"
-          ],
-          "autoGenerate": true
+          ]
         },
         "indices": [],
         "foreignKeys": []
@@ -40,7 +46,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3667437a9a7f06710ac2836c97506b91')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'cc582452d27537ad4017739774cdfb3c')"
     ]
   }
 }
