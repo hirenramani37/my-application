@@ -9,16 +9,28 @@
         tools:context="com.demo.ui.main.MainActivity">
 
 
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvTasks"
+        <fragment
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/map"
+            tools:context=".MapsActivity"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:itemCount="6"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvTasks"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            tools:itemCount="6"/>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
